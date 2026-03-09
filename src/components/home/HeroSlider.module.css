@@ -1,0 +1,347 @@
+.hero {
+    position: relative;
+    height: 100vh;
+    min-height: 700px;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+}
+
+/* Background */
+.bg {
+    position: absolute;
+    inset: 0;
+}
+
+.slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.bgImg {
+    object-fit: cover;
+    object-position: center top;
+    transform: scale(1.05);
+    transition: transform 6s ease;
+    filter: brightness(0.7);
+}
+
+.slide.active .bgImg {
+    transform: scale(1);
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg,
+            rgba(28, 28, 30, 0.65) 0%,
+            rgba(28, 28, 30, 0.2) 50%,
+            rgba(28, 28, 30, 0.5) 100%);
+}
+
+/* Content */
+.content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    padding-bottom: 80px;
+}
+
+.inner {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 64px;
+}
+
+/* Text block */
+.textBlock {
+    max-width: 620px;
+    animation: heroIn 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@keyframes heroIn {
+    from {
+        opacity: 0;
+        transform: translateY(32px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.label {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    margin-bottom: 20px;
+    padding: 6px 16px;
+    border: 1px solid rgba(201, 168, 76, 0.5);
+    border-radius: 2px;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-display);
+    font-size: clamp(3rem, 6vw, 5.5rem);
+    font-weight: 300;
+    line-height: 1.1;
+    color: white;
+    letter-spacing: -0.02em;
+    margin-bottom: 24px;
+}
+
+.titleLine {
+    display: block;
+    overflow: hidden;
+}
+
+.subtitle {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.75);
+    line-height: 1.6;
+    margin-bottom: 36px;
+    max-width: 480px;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.ctaBtn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 16px 32px;
+    background: var(--gradient-gold);
+    color: var(--charcoal);
+    border-radius: 3px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 32px rgba(201, 168, 76, 0.4);
+}
+
+.ctaBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 40px rgba(201, 168, 76, 0.55);
+}
+
+.ctaSecondary {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.8);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    padding-bottom: 2px;
+    transition: all 0.2s;
+}
+
+.ctaSecondary:hover {
+    color: white;
+    border-color: white;
+}
+
+/* Stats */
+.stats {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    margin-top: 56px;
+    padding-top: 32px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.stat {
+    text-align: left;
+}
+
+.statNum {
+    display: block;
+    font-family: var(--font-display);
+    font-size: 36px;
+    font-weight: 600;
+    color: white;
+    line-height: 1;
+    margin-bottom: 4px;
+}
+
+.statLabel {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold-light);
+}
+
+.statDivider {
+    width: 1px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Navigation buttons */
+.navBtn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    border: 1.5px solid rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.navBtn:hover {
+    background: rgba(255, 255, 255, 0.25);
+    border-color: rgba(255, 255, 255, 0.7);
+    transform: translateY(-50%) scale(1.05);
+}
+
+.prevBtn {
+    left: 32px;
+}
+
+.nextBtn {
+    right: 32px;
+}
+
+/* Dots */
+.dots {
+    position: absolute;
+    bottom: 32px;
+    right: 64px;
+    z-index: 5;
+    display: flex;
+    gap: 8px;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: 1.5px solid rgba(255, 255, 255, 0.5);
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dot.dotActive {
+    background: var(--gold);
+    border-color: var(--gold);
+    width: 24px;
+    border-radius: 4px;
+}
+
+/* Scroll indicator */
+.scroll {
+    position: absolute;
+    bottom: 0;
+    left: 64px;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding-bottom: 24px;
+}
+
+.scrollLine {
+    width: 1px;
+    height: 60px;
+    background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.5));
+    animation: scrollPulse 2s ease infinite;
+}
+
+@keyframes scrollPulse {
+
+    0%,
+    100% {
+        opacity: 0.4;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+.scrollText {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.5);
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+}
+
+@media (max-width: 1024px) {
+    .inner {
+        padding: 0 40px;
+    }
+
+    .prevBtn {
+        left: 16px;
+    }
+
+    .nextBtn {
+        right: 16px;
+    }
+
+    .scroll {
+        display: none;
+    }
+
+    .dots {
+        right: 24px;
+        bottom: 80px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        min-height: 100svh;
+    }
+
+    .inner {
+        padding: 0 24px;
+    }
+
+    .title {
+        font-size: clamp(2.4rem, 8vw, 3.5rem);
+    }
+
+    .stats {
+        gap: 20px;
+        margin-top: 32px;
+    }
+
+    .statNum {
+        font-size: 28px;
+    }
+}

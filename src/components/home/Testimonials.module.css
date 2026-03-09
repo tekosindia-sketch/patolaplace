@@ -1,0 +1,169 @@
+.section {
+    padding: 80px 0;
+    background: white;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.label {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 12px;
+}
+
+.title {
+    font-family: var(--font-display);
+    font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+    font-weight: 500;
+    color: var(--charcoal);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-bottom: 60px;
+}
+
+.card {
+    background: var(--ivory);
+    border-radius: 16px;
+    padding: 32px;
+    position: relative;
+    border: 1px solid rgba(201, 168, 76, 0.15);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 16px 48px rgba(28, 28, 30, 0.09);
+    transform: translateY(-3px);
+}
+
+.quoteIcon {
+    color: var(--gold);
+    margin-bottom: 16px;
+    opacity: 0.6;
+}
+
+.stars {
+    display: flex;
+    gap: 3px;
+    margin-bottom: 14px;
+}
+
+.text {
+    font-family: var(--font-display);
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--charcoal);
+    margin-bottom: 24px;
+    font-style: italic;
+}
+
+.author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.avatar {
+    width: 42px;
+    height: 42px;
+    background: var(--gradient-burgundy);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-display);
+    font-size: 18px;
+    font-weight: 600;
+    flex-shrink: 0;
+}
+
+.name {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--charcoal);
+}
+
+.location {
+    font-size: 12px;
+    color: #999;
+    margin-top: 2px;
+}
+
+/* Trust */
+.trustRow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    background: var(--charcoal);
+    border-radius: 16px;
+    overflow: hidden;
+    flex-wrap: wrap;
+}
+
+.trustBadge {
+    flex: 1;
+    min-width: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 6px;
+    padding: 24px 16px;
+    border-right: 1px solid rgba(255, 255, 255, 0.08);
+    transition: background 0.2s;
+}
+
+.trustBadge:last-child {
+    border-right: none;
+}
+
+.trustBadge:hover {
+    background: rgba(201, 168, 76, 0.1);
+}
+
+.trustIcon {
+    font-size: 24px;
+}
+
+.trustLabel {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.7);
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .trustRow {
+        flex-wrap: wrap;
+    }
+
+    .trustBadge {
+        min-width: 50%;
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+}

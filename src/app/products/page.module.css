@@ -1,0 +1,248 @@
+.page {
+    min-height: 100vh;
+    background: var(--ivory);
+}
+
+.pageHeader {
+    text-align: center;
+    padding: 60px 24px 40px;
+    background: white;
+    border-bottom: 1px solid var(--ivory-dark);
+}
+
+.pageLabel {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold);
+    display: block;
+    margin-bottom: 10px;
+}
+
+.pageTitle {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 500;
+    color: var(--charcoal);
+    margin-bottom: 10px;
+}
+
+.pageSub {
+    font-size: 14px;
+    color: #888;
+}
+
+.layout {
+    display: flex;
+    gap: 0;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 260px;
+    flex-shrink: 0;
+    padding: 32px 24px 32px 0;
+    border-right: 1px solid var(--ivory-dark);
+    position: sticky;
+    top: 72px;
+    height: calc(100vh - 72px);
+    overflow-y: auto;
+}
+
+.filterSection {
+    margin-bottom: 32px;
+}
+
+.filterTitle {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--charcoal);
+    margin-bottom: 14px;
+}
+
+.filterOptions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.filterChip {
+    padding: 6px 14px;
+    border-radius: 99px;
+    border: 1.5px solid #E0D5C8;
+    background: white;
+    font-size: 12px;
+    font-weight: 500;
+    color: #777;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.filterChip:hover {
+    border-color: var(--gold);
+    color: var(--gold-dark);
+}
+
+.filterChip.active {
+    background: var(--charcoal);
+    color: white;
+    border-color: var(--charcoal);
+}
+
+.priceDisplay {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--charcoal);
+    margin-bottom: 10px;
+}
+
+.priceSlider {
+    width: 100%;
+    accent-color: var(--gold);
+    margin-bottom: 6px;
+}
+
+.priceMinMax {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    color: #aaa;
+}
+
+.clearBtn {
+    width: 100%;
+    padding: 10px;
+    border: 1.5px solid var(--gold);
+    background: transparent;
+    color: var(--gold-dark);
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.clearBtn:hover {
+    background: var(--gold);
+    color: var(--charcoal);
+}
+
+/* Main */
+.main {
+    flex: 1;
+    padding: 32px 0 32px 32px;
+}
+
+.toolbar {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--ivory-dark);
+    flex-wrap: wrap;
+}
+
+.filterToggle {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    border: 1.5px solid #E0D5C8;
+    border-radius: 6px;
+    background: white;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.filterToggle:hover {
+    border-color: var(--gold);
+}
+
+.resultCount {
+    font-size: 13px;
+    color: #888;
+    flex: 1;
+}
+
+.sortSelect {
+    padding: 8px 16px;
+    border: 1.5px solid #E0D5C8;
+    border-radius: 6px;
+    background: white;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--charcoal);
+    outline: none;
+    cursor: pointer;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.empty {
+    text-align: center;
+    padding: 80px 24px;
+}
+
+.emptyIcon {
+    font-size: 48px;
+    margin-bottom: 16px;
+}
+
+.emptyTitle {
+    font-family: var(--font-display);
+    font-size: 24px;
+    color: var(--charcoal);
+    margin-bottom: 8px;
+}
+
+.emptyText {
+    font-size: 14px;
+    color: #888;
+}
+
+@media (max-width: 1200px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .layout {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        position: static;
+        height: auto;
+        border-right: none;
+        padding: 24px 0;
+        border-bottom: 1px solid var(--ivory-dark);
+    }
+
+    .main {
+        padding: 24px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+}

@@ -1,0 +1,111 @@
+.container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--ivory);
+    padding: 24px;
+    font-family: var(--font-body);
+}
+
+.card {
+    width: 100%;
+    max-width: 400px;
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--ivory-dark);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.brand {
+    font-family: var(--font-display);
+    font-size: 24px;
+    color: var(--gold);
+    display: block;
+    margin-bottom: 8px;
+}
+
+.title {
+    font-family: var(--font-display);
+    font-size: 32px;
+    color: var(--charcoal);
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    font-size: 14px;
+    color: #888;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.inputGroup label {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #666;
+}
+
+.inputGroup input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1.5px solid #E0D5C8;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.inputGroup input:focus {
+    border-color: var(--gold);
+}
+
+.button {
+    margin-top: 12px;
+    padding: 14px;
+    background: var(--charcoal);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.button:hover {
+    background: #000;
+}
+
+.button:disabled {
+    background: #ccc;
+}
+
+.error {
+    color: #ef4444;
+    font-size: 13px;
+    text-align: center;
+    background: #fef2f2;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #fee2e2;
+}

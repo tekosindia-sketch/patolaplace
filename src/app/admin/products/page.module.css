@@ -1,0 +1,193 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title {
+    font-family: var(--font-display);
+    font-size: 32px;
+    color: var(--charcoal);
+    margin-bottom: 4px;
+}
+
+.subtitle {
+    font-size: 14px;
+    color: #888;
+}
+
+.addBtn {
+    background: var(--gold);
+    color: var(--charcoal);
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s;
+}
+
+.addBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(201, 168, 76, 0.2);
+}
+
+.toolbar {
+    display: flex;
+    gap: 16px;
+}
+
+.search {
+    position: relative;
+    flex: 1;
+    max-width: 400px;
+}
+
+.searchIcon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+}
+
+.search input {
+    width: 100%;
+    padding: 10px 10px 10px 40px;
+    border: 1px solid var(--ivory-dark);
+    border-radius: 8px;
+    outline: none;
+    font-size: 14px;
+}
+
+.tableCard {
+    background: white;
+    border-radius: 16px;
+    border: 1px solid var(--ivory-dark);
+    overflow: hidden;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th {
+    text-align: left;
+    padding: 16px 24px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #999;
+    border-bottom: 1px solid var(--ivory-dark);
+}
+
+.table td {
+    padding: 16px 24px;
+    border-bottom: 1px solid var(--ivory-dark);
+    vertical-align: middle;
+}
+
+.productCell {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.imgWrapper {
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    flex-shrink: 0;
+    background: var(--ivory);
+}
+
+.productName {
+    font-weight: 600;
+    color: var(--charcoal);
+    margin-bottom: 2px;
+}
+
+.id {
+    font-size: 11px;
+    color: #aaa;
+    font-family: monospace;
+}
+
+.externalLink {
+    color: #ccc;
+    transition: color 0.2s;
+}
+
+.externalLink:hover {
+    color: var(--gold);
+}
+
+.categoryBadge {
+    font-size: 11px;
+    font-weight: 700;
+    background: var(--ivory);
+    color: #666;
+    padding: 4px 10px;
+    border-radius: 99px;
+    text-transform: uppercase;
+}
+
+.price {
+    font-weight: 600;
+    color: var(--charcoal);
+}
+
+.oldPrice {
+    font-size: 12px;
+    color: #aaa;
+    text-decoration: line-through;
+}
+
+.stockStatus {
+    font-size: 13px;
+    color: #22c55e;
+    font-weight: 600;
+}
+
+.actions {
+    display: flex;
+    gap: 8px;
+}
+
+.editBtn, .deleteBtn {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--ivory-dark);
+    background: white;
+    cursor: pointer;
+    transition: all 0.2s;
+    color: #666;
+}
+
+.editBtn:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+    background: #fdfaf3;
+}
+
+.deleteBtn:hover {
+    border-color: #fee2e2;
+    color: #ef4444;
+    background: #fef2f2;
+}

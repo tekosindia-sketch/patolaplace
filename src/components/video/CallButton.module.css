@@ -1,0 +1,65 @@
+.callButton {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background: var(--charcoal);
+    color: white;
+    border: none;
+    padding: 16px 24px;
+    border-radius: 99px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    z-index: 100;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, background 0.2s;
+}
+
+.callButton:hover {
+    transform: translateY(-2px);
+    background: var(--gold-dark);
+}
+
+.pulseRing {
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+    pointer-events: none;
+}
+
+@keyframes pulse {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(3);
+        opacity: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .callButton {
+        bottom: 16px;
+        right: 16px;
+        padding: 12px 18px;
+    }
+
+    .callButton span {
+        display: none;
+    }
+
+    .pulseRing {
+        left: 50%;
+    }
+}
